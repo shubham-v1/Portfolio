@@ -57,8 +57,15 @@ const dynamicTextFunction = () =>{
     }
 }
 
-
-
+// Hamburger
+const hamClick = () =>{
+    const bar = document.querySelector('.bar');
+    const elementToDisplay = document.querySelector('.unorderedList');
+    bar.addEventListener('click',(e)=>{
+        elementToDisplay.classList.toggle('displayMenu');
+    })
+}
+hamClick();
 document.addEventListener("DOMContentLoaded",()=>{
     dynamicTextFunction();
     navbar();
