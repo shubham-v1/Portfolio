@@ -1,0 +1,147 @@
+/* Google font link */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+
+/* Resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto",sans-serif;
+    
+}
+.header{
+    width: 100%;
+    height:60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6rem;
+    position: fixed;
+   
+}
+.header .logo{
+    text-decoration: none;
+    font-size: 2rem;
+    outline: none;
+}
+.header .navbar ul{
+    display: flex;
+}
+.header .navbar ul li{
+    list-style: none;
+    margin: 0 1rem;
+}
+.header .navbar ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    outline: none;
+    font-weight: 400;
+    color: #2a4042;
+}
+.headerColor{
+    background: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+/* Home Section */
+#home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3f2fd;
+    background: linear-gradient(80deg,#e3f2fd 50%, #fff 50%);
+    
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img-content{
+    width: 230px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(80deg,#fff 45%, #e3f2fd 45%);
+}
+.img-content #profilePicture{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-position: top;
+    object-fit: cover;
+}
+
+.text-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sec-name{
+    color: #2196f3;
+}
+
+.text-content .name-holder h3{
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 2rem;
+    color: #2a4042;
+}
+.text-content .typing-text{
+    font-size: 2.2rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.static-text{
+    color: #2196f3;
+}
+
+.cursor{
+    width: 2px;
+    display: inline-block;
+    background-color: #2a4042;
+    margin-left: 0.1rem;
+    animation: blink 1s infinite;
+}
+.typing{
+    animation: none;
+}
+
+@keyframes blink{
+    0%{
+        background-color: #2a4042;
+    }
+    49%{
+        background-color: #2a4042;
+    }
+    50%{
+        background-color: transparent;
+    }
+    99%{
+        background-color: transparent;
+    }
+    100%{
+        background-color:#2a4042;
+    }
+}
