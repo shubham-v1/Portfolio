@@ -294,15 +294,6 @@ body{
 
 /* Media queries  */
 
-/* @media only screen  and (min-width:1270px){ */
-  
-
-    /* .header{
-        left: 50%;
-        transform: translateX(-50%);
-
-    } */
-/* } */
 
 @media only screen and (max-width:1399px){
     .header{
@@ -386,40 +377,55 @@ body{
     .left-box{
         justify-content: center;
     }
-    .cv-download a{
-        border: 2px solid black;
-        margin: auto;
-        display: block;
-        width: 220px;
-        text-align: center;
-    }
+   
     
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:635px){
     .info-box{
         display: flex;
         flex-direction: column;
     }
-}
-
-@media only screen and (max-width:480px){
-    .right-box .about-content .aboutFirstHeading{
-        font-size: .9rem;
-    }
-}
-
-@media only screen and (max-width:560px){
     .text-content .name-holder h3{
         font-size: 2.2rem;
     }
 }
 
-@media only screen and (max-width:450px){
+@media only screen and (max-width:480px){
+    .right-box .about-content .aboutFirstHeading{
+        font-size: 1rem;
+        height: 40px;
+    }
     .text-content .name-holder h3{
         font-size: 1.8rem;
     }
     .text-content .typing-text{
         font-size: 1.5rem;
+    }
+     .cv-download a{
+        margin: auto;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:280px){
+    .text-content .name-holder h3{
+        border:2px solid black;
+        font-size: 1.3rem;
+    }
+    .info-box .mail p{
+        word-break: break-all;
+    }
+    .about-section .aboutHeading .secondHeading{
+        font-size: 1.5rem;
+
+    }
+    .about-section .aboutHeading .firstHeading{
+        font-size: .9rem;
+    }
+    .typing-text p{
+        font-size: 1.2rem;
     }
 }
