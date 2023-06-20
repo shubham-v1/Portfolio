@@ -48,13 +48,18 @@ body{
     font-weight: 400;
     color: #2a4042;
 }
+.header .navbar ul li a:hover, .header .navbar ul li a.active{
+    color:#2196f3;
+    text-decoration: underline;
+    transition: color .5s ease-in-out;
+}
 .navbar{
     display: flex;
     align-items: center;
 }
 
 .bar{
-    font-size: 1.5rem;
+    font-size: 2rem;
     display: none;
 }
 
@@ -174,10 +179,12 @@ body{
 }
 
 
+/* Media queries  */
 
 @media only screen  and (max-width:800px){
     .bar{
         display:contents;
+        transition: all 1s ease-in;
     }
     .bar i{
         z-index: 9999;
@@ -189,7 +196,7 @@ body{
         right: -100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        padding-top: 150px;
         align-items: center;
         position: absolute;
         height: 100vh;
@@ -198,7 +205,6 @@ body{
     }
     .header .navbar ul.displayMenu{
         left: 50%;
-        transition: all 1s ease;
     }
     .header .navbar ul li{
         text-align: center;

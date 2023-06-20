@@ -57,11 +57,21 @@ const dynamicTextFunction = () =>{
     }
 }
 
+ 
 // Hamburger
+let isNavActive = true;
 const hamClick = () =>{
     const bar = document.querySelector('.bar');
     const elementToDisplay = document.querySelector('.unorderedList');
     bar.addEventListener('click',(e)=>{
+        if(isNavActive){
+            bar.innerHTML = '<i class="fa-solid fa-xmark"></i> ';
+            isNavActive = false;
+        }
+        else{
+            bar.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            isNavActive = true;
+        }
         elementToDisplay.classList.toggle('displayMenu');
     })
 }
