@@ -11,7 +11,7 @@ const navbar = () =>{
 const dynamicTextFunction = () =>{
     let dynamicElement = document.querySelector('.dynamic-text');
     let cursor = document.querySelector('.cursor');
-    const textArray = ["web developer", "web designer"];
+    const textArray = ["Web Developer", "Web Designer"];
     
     const typingDelay = 200;
     const erasingDelay = 100;
