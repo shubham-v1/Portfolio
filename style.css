@@ -159,6 +159,9 @@ body{
 }
 
 
+
+
+
 @media only screen  and (min-width:1270px){
   
 
@@ -169,6 +172,8 @@ body{
 
     }
 }
+
+
 
 @media only screen  and (max-width:800px){
     .bar{
@@ -206,4 +211,17 @@ body{
         font-size: 1.8rem;
     }
     
+}
+
+
+@media only screen and (max-width:560px){
+    .text-content .name-holder h3{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .text-content .name-holder h3{
+        font-size: 1.5rem;
+    }
 }
