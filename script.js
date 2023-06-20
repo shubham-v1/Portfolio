@@ -1,6 +1,6 @@
 // Stickey navbar
 const navbar = () =>{
-    let header = document.querySelector('.header');
+    let header = document.querySelector('.navbar-container');
     window.addEventListener('scroll',()=>{
         window.scrollY > 60 ?header.classList.add('headerColor'):header.classList.remove('headerColor');
     })
@@ -9,7 +9,7 @@ const navbar = () =>{
 
 // Dynamic Text code
 const dynamicTextFunction = () =>{
-    let dynamicElement = document.querySelector('.dynamic-text');
+    let dynamicElement = document.querySelectorAll('.dynamic-text');
     let cursor = document.querySelector('.cursor');
     const textArray = ["Web Developer", "Web Designer"];
     
@@ -25,7 +25,8 @@ const dynamicTextFunction = () =>{
             if(!cursor.classList.contains('typing')){
                 cursor.classList.add("typing");
             }
-            dynamicElement.textContent += textArray[textArrayIndex].charAt(charIndex);
+            dynamicElement[0].textContent += textArray[textArrayIndex].charAt(charIndex);
+            dynamicElement[1].textContent += textArray[textArrayIndex].charAt(charIndex);
             charIndex++;
             setTimeout(type,typingDelay);
         }
@@ -39,7 +40,8 @@ const dynamicTextFunction = () =>{
             if(!cursor.classList.contains('typing')){
                 cursor.classList.add("typing");
             }
-            dynamicElement.textContent = textArray[textArrayIndex].substring(0,charIndex - 1);
+            dynamicElement[0].textContent = textArray[textArrayIndex].substring(0,charIndex - 1);
+            dynamicElement[1].textContent = textArray[textArrayIndex].substring(0,charIndex - 1);
             charIndex --;
             setTimeout(erase, erasingDelay);
         }
