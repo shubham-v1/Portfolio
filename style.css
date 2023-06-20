@@ -184,7 +184,6 @@ body{
 @media only screen  and (max-width:800px){
     .bar{
         display:contents;
-        transition: all 1s ease-in;
     }
     .bar i{
         z-index: 9999;
@@ -193,7 +192,7 @@ body{
     .header .navbar ul{
         width: 50%;
         top: 0;
-        right: -100%;
+        right: -55%;
         display: flex;
         flex-direction: column;
         padding-top: 150px;
@@ -201,10 +200,13 @@ body{
         position: absolute;
         height: 100vh;
         background-color: #fff;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.357);
+        transition: right .4s ease-out;
         
     }
     .header .navbar ul.displayMenu{
-        left: 50%;
+        right: 0;
+        transition: right .4s ease-in;
     }
     .header .navbar ul li{
         text-align: center;
@@ -222,12 +224,15 @@ body{
 
 @media only screen and (max-width:560px){
     .text-content .name-holder h3{
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 }
 
 @media only screen and (max-width:450px){
     .text-content .name-holder h3{
+        font-size: 1.8rem;
+    }
+    .text-content .typing-text{
         font-size: 1.5rem;
     }
 }

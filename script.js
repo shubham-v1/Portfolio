@@ -75,8 +75,8 @@ const hamClick = () =>{
         elementToDisplay.classList.toggle('displayMenu');
     })
 }
-hamClick();
 document.addEventListener("DOMContentLoaded",()=>{
     dynamicTextFunction();
     navbar();
+    hamClick();
 })
