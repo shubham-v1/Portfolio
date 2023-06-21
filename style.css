@@ -292,6 +292,88 @@ body{
 } */
 
 
+
+
+
+/*Skill Section  */
+
+.skillCards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.card{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card-content{
+    text-align: center;
+}
+.card-content .circle-item{
+    font-size: 3rem;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+    background: conic-gradient(#2196f3 3.5deg, #e7e7e7 0deg);
+}
+.circle-item i{
+    z-index: 99;
+}
+.card-content .circle-item::before{
+    content: "";
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.skill-name{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.skillPtg{
+    color: #2196f3;
+    margin-left: .2rem;
+}
+
+.html{
+    color: rgb(255, 81, 0);
+}
+
+.css{
+    color: rgb(63, 63, 247);
+}
+.javascript{
+    color: rgb(217, 217, 4);
+}
+.git{
+    color: red;
+}
+.node{
+    color: green;
+}
+.react{
+    color: #00d5ff;
+}
+.python{
+    color: rgb(255, 170, 0);
+}
+.cProg{
+    color: rgb(142, 142, 241);
+}
+
+
 /* Media queries  */
 
 
@@ -324,7 +406,7 @@ body{
         padding: 0 2rem;
     }
     .about-section{
-        padding: 0 2rem;
+        padding: 5rem 2rem 0 2rem;
     }
 }
 @media only screen  and (max-width:912px){
@@ -377,6 +459,15 @@ body{
     .left-box{
         justify-content: center;
     }
+
+    .skillCards{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
    
     
 }
@@ -390,12 +481,24 @@ body{
         font-size: 2.2rem;
     }
 }
+@media only screen  and (max-width:640px){
+    .skillCards{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+}
 
 @media only screen and (max-width:480px){
     .right-box .about-content .aboutFirstHeading{
         font-size: 1rem;
         height: 40px;
+        margin-bottom: 1rem;
     }
+
     .text-content .name-holder h3{
         font-size: 1.8rem;
     }
@@ -408,11 +511,25 @@ body{
         width: 100%;
         text-align: center;
     }
+    .skillCards{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+    .card{
+        height: 190px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
 }
 
 @media only screen and (max-width:280px){
     .text-content .name-holder h3{
-        border:2px solid black;
         font-size: 1.3rem;
     }
     .info-box .mail p{
@@ -428,4 +545,43 @@ body{
     .typing-text p{
         font-size: 1.2rem;
     }
+
+
+    .skillCards{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+    .card{
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .card-content .circle-item{
+        font-size: 2rem;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        position: relative;
+        background: conic-gradient(#2196f3 3.5deg, #e7e7e7 0deg);
+    }
+    .card-content .circle-item::before{
+        content: "";
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
 }
