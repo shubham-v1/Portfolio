@@ -1,12 +1,29 @@
 // Stickey navbar
 const navbar = () => {
     let header = document.querySelector('.navbar-container');
+    let navLinks = document.querySelectorAll('.nav-links');
+    let allSection = document.querySelectorAll('.allSection'); 
     window.addEventListener('scroll', () => {
         window.scrollY > 60 ? header.classList.add('headerColor') : header.classList.remove('headerColor');
+
+        for(let i = 0; i < allSection.length; i++){
+            if(window.scrollY >= allSection[i].offsetTop){
+                document.querySelector('.active').classList.remove('active');
+                if(allSection[i].id === navLinks[i].href.split('#')[1]){
+                    const titleTab = allSection[i].id.slice(0,1).toUpperCase()+allSection[i].id.slice(1,allSection[i].id.length)
+                    document.title = `Shubham | ${titleTab}`
+                    navLinks[i].classList.add('active')
+                }
+            }
+
+        }
+
     })
 
 
 }
+
+
 
 // Dynamic Text code
 const dynamicTextFunction = () => {
@@ -62,25 +79,33 @@ const dynamicTextFunction = () => {
 
 
 // Hamburger
-let isNavActive = true;
-const hamClick = () => {
-    const bar = document.querySelector('.bar');
-    const elementToDisplay = document.querySelector('.unorderedList');
-    bar.addEventListener('click', (e) => {
-        if (isNavActive) {
-            bar.innerHTML = '<i class="fa-solid fa-xmark"></i> ';
-            isNavActive = false;
+
+const hamNavigate = () =>{
+    const hamIcon = document.querySelector('.bar');
+    const sidebar = document.getElementById('sidebar');
+    let isNavActive = true;
+    hamIcon.addEventListener('click',()=>{
+        if(isNavActive === true){
+            hamIcon.innerHTML = '<i class="fa-solid fa-xmark"></i> ';
+            isNavActive = false
         }
-        else {
-            bar.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        else{
+            hamIcon.innerHTML = '<i class="fa-solid fa-bars"></i>';
             isNavActive = true;
         }
-        elementToDisplay.classList.toggle('displayMenu');
+        sidebar.classList.toggle('activeNav');
     })
-
-
+    document.addEventListener('click',(e)=>{
+        if(e.target.id !== "sidebar" && !e.target.classList.contains('fa-solid')){
+            sidebar.classList.remove('activeNav');
+            hamIcon.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            isNavActive = true;
+            
+        }
+    })
 }
 
+hamNavigate();
 // Skill progress-bar
 
 const skillProgressBar = () => {
@@ -119,9 +144,10 @@ const skillProgressBar = () => {
 
 
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
     dynamicTextFunction();
 })
 navbar();
-hamClick();
 skillProgressBar();

@@ -49,14 +49,13 @@ body{
 }
 .header .navbar ul li a{
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     outline: none;
     font-weight: 400;
     color: #2a4042;
 }
 .header .navbar ul li a:hover, .header .navbar ul li a.active{
     color:#2196f3;
-    transition: color .5s ease-in-out;
 }
 .navbar{
     display: flex;
@@ -174,7 +173,8 @@ body{
 /* About Section */
 
 .about-section{
-    padding: 5rem 0 0 2rem;
+    padding: 5rem 0 3rem 2rem;
+   
 }
 .aboutHeading .firstHeading{
     color: #2196f3;
@@ -223,7 +223,7 @@ body{
     padding: 2rem 0 2rem 2rem;
 }
 .right-box .about-content .aboutFirstHeading{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 2rem;
     letter-spacing: .6px;
@@ -234,8 +234,8 @@ body{
 .right-box .about-content .aboutSecondText{
     margin-bottom: 2rem;
     text-align: justify;
-    line-height: 1.8rem;
-    letter-spacing: .5px;
+    line-height: 2rem;
+    letter-spacing: 1px;
     color: #4b4b4bd6;
 }
 .prof-name{
@@ -296,7 +296,12 @@ body{
 
 
 /*Skill Section  */
-
+.skillCont{
+    width: 100%;
+    height: 100%;
+    background-color:#f9f9f9;
+    padding-bottom: 3rem;
+}
 .skillCards{
     width: 100%;
     display: grid;
@@ -310,7 +315,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #fff;
+    border-radius: 1rem;
 }
 .card-content{
     text-align: center;
@@ -374,6 +381,155 @@ body{
 }
 
 
+
+/* Projects */
+#projects{
+    width: 100%;
+    height: 500px;
+    font-size: 1.5rem;
+    padding: 5rem 0;
+}
+.project-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icon{
+    font-size: 4rem;
+    color:#2196f3;
+}
+/* Contact Section */
+#contact{
+    width: 100%;
+    height: 100%;
+    background-color:#f9f9f9;
+    padding-bottom: 3rem;
+}
+.contact-container{
+    display: flex;
+    gap: 3rem;
+}
+.formBox1{
+    flex:1;
+}
+.formBox1 p{
+    color:#2a4042;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+}
+.form-item{
+    width: 100%;
+}
+.form-item input{
+    width: 100%;
+    font-size: 1rem;
+    padding: .7rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.265)
+}
+.form-item textarea{
+    width: 100%;
+    resize: none;
+    padding: .7rem;
+    font-size: 1rem;
+    outline: none;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.265)
+}
+.formBox2{
+    flex:1;
+}
+
+.form-item button{
+    border: none;
+    background: #2196f3;
+    color: #fff;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+}
+.formBox2Content1{
+    text-align: justify;
+    letter-spacing:.8px;
+    line-height: 2rem;
+    color: #2a4042d0;
+}
+.formBox2Content2{
+    margin: 2rem  0;
+    letter-spacing: 1px;
+    line-height: 2rem;
+}
+
+
+
+
+
+/* .formBox2Content2 span{
+    color: #2a4042d0;
+    margin-left: 1rem;
+    position: relative;
+}
+.formBox2Content2 span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    bottom: -5px;
+    transition: width 1s ease-in-out;
+    border: 1px solid black;
+} */
+/* .formBox2Content2 span:hover{
+    width: 100%;
+} */
+.fromBox2Social{
+    font-size: 3rem;
+    display: flex;
+}
+
+.socialLinked a{
+    color: rgb(121, 121, 255);
+}
+.socialGithub a{
+    color: rgb(141, 36, 238);
+}
+.socialFacebook a{
+    color: rgb(83, 138, 255);
+}
+.socialInsta a{
+    color: rgb(255, 0, 153);
+}
+.social-icon:hover{
+    transform:translateY(-10px);
+}
+.social-icon{
+    margin-right: 1.4rem;
+    padding: 2px 5px;
+    transition: transform .8s ease-in-out;
+}
+
+/* footer */
+#footer{
+    width: 100%;
+    height: 200px;
+    background-color:#263238;
+    color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#footer p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+
+
+
+
 /* Media queries  */
 
 
@@ -432,10 +588,11 @@ body{
         transition: right .4s ease-out;
         
     }
-    .header .navbar ul.displayMenu{
+    .header .navbar ul.activeNav{
         right: 0;
         transition: right .4s ease-in;
     }
+
     .header .navbar ul li{
         text-align: center;
         margin: 1.5rem 0;
@@ -489,6 +646,9 @@ body{
         grid-template-rows: repeat(4,1fr);
         gap: 2rem;
         margin-bottom: 3rem;
+    }
+    .contact-container{
+        flex-direction: column;
     }
 }
 

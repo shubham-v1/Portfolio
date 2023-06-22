@@ -18,12 +18,12 @@
         <header class="header">
             <a href="#" class="logo"><i class="fa-regular fa-user"></i></a>
             <nav class="navbar">
-                <ul class="unorderedList" id="sidebar">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul id="sidebar">
+                    <li><a href="#home" class="nav-links active">Home</a></li>
+                    <li><a href="#about" class="nav-links">About</a></li>
+                    <li><a href="#skills" class="nav-links">Skills</a></li>
+                    <li><a href="#projects" class="nav-links">Projects</a></li>
+                    <li><a href="#contact" class="nav-links">Contact</a></li>
                 </ul>
                 <span class="bar"><i id="toggle" class="fa-solid fa-bars"></i></span>
             </nav>
@@ -32,7 +32,7 @@
     <!-- sections -->
     <main>
         <!-- Home Section -->
-        <section class="section" id="home">
+        <section class="section allSection" id="home">
             <div class="content">
                 <div class="img-content">
                     <img id="profilePicture" src="profile.jpg" alt="profile-picture">
@@ -50,7 +50,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-section" id="about">
+        <section class="about-section allSection" id="about">
             <div class="aboutHeading">
                 <p class="firstHeading">BIOGRAPHY</p>
                 <h3 class="secondHeading">About Me</h3>
@@ -63,8 +63,12 @@
                 </div>
                 <div class="right-box">
                     <div class="about-content">
-                        <h4 class="aboutFirstHeading">I'm Shubham Vairagade and <span class="dynamic-text aboutSecondHeading"></span></h4>
-                        <p class="aboutSecondText">Hi! My name is <span class="prof-name">Shubham Vairagade.</span> I am a Web Developer, Web designer. I can design and develope responsive and interactive websites and I'm very passionated and delicated to may work. I have acquired the skills and knowledge necessary to make your project a success.</p>
+                        <h4 class="aboutFirstHeading">I'm Shubham Vairagade and <span
+                                class="dynamic-text aboutSecondHeading"></span></h4>
+                        <p class="aboutSecondText">Hi! My name is <span class="prof-name">Shubham Vairagade.</span> I am
+                            a Web Developer, Web designer. I can design and develope responsive and interactive websites
+                            and I'm very passionated and delicated to may work. I have acquired the skills and knowledge
+                            necessary to make your project a success.</p>
                     </div>
                     <div class="info-container">
                         <div class="info-box">
@@ -85,7 +89,7 @@
                                     <i class="fa-solid fa-envelope"></i>
                                     <p>Mail: <span>shubhamvairagade91@gmail.com</span></p>
                                 </div>
-                                
+
                             </div>
                             <div class="right-info">
                                 <div class="age info-items">
@@ -104,7 +108,7 @@
                                     <i class="fa-solid fa-phone"></i>
                                     <p>Phone: <span>+91 9146609969</span></p>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div class="cv-download">
@@ -114,85 +118,142 @@
                 </div>
             </div>
         </section>
-        <section class="about-section" id="skills">
-            <div class="skills">
-                <div class="aboutHeading">
-                    <p class="firstHeading">SKILLS</p>
-                    <h3 class="secondHeading">Experties</h3>
-                </div>
-                <div class="skillCards">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="circle-item html" data-count = "90">
-                                <i class="fa-brands fa-html5"></i>
-                            </div>
-                            <h4 class="skill-name">HTML <span class="skillPtg"></span></h4>
-                        </div>
+        <div class="skillCont">
+            <section class="about-section allSection" id="skills">
+                <div class="skills">
+                    <div class="aboutHeading">
+                        <p class="firstHeading">EXPERTIES</p>
+                        <h3 class="secondHeading">My Skills</h3>
                     </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="circle-item css" data-count="75">
-                                <i class="fa-brands fa-css3-alt"></i>
+                    <div class="skillCards">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="circle-item html" data-count="90">
+                                    <i class="fa-brands fa-html5"></i>
+                                </div>
+                                <h4 class="skill-name">HTML <span class="skillPtg"></span></h4>
                             </div>
-                            <h4 class="skill-name">CSS <span class="skillPtg"></span></h4>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="circle-item javascript" data-count="60">
-                                <i class="fa-brands fa-square-js"></i>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="circle-item css" data-count="75">
+                                    <i class="fa-brands fa-css3-alt"></i>
+                                </div>
+                                <h4 class="skill-name">CSS <span class="skillPtg"></span></h4>
                             </div>
-                            <h4 class="skill-name">JavaScript <span class="skillPtg"></span></h4>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="circle-item javascript" data-count="60">
+                                    <i class="fa-brands fa-square-js"></i>
+                                </div>
+                                <h4 class="skill-name">JavaScript <span class="skillPtg"></span></h4>
 
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="circle-item git" data-count="80">
+                                    <i class="fa-brands fa-git-alt"></i>
+                                </div>
+                                <h4 class="skill-name">Git <span class="skillPtg"></span></h4>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="circle-item node" data-count="65">
+                                    <i class="fa-brands fa-node-js"></i>
+                                </div>
+                                <h4 class="skill-name">Node JS <span class="skillPtg"></span></h4>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="circle-item react" data-count="60">
+                                    <i class="fa-brands fa-react"></i>
+                                </div>
+                                <h4 class="skill-name">React <span class="skillPtg"></span></h4>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="circle-item python" data-count="68">
+                                    <i class="fa-brands fa-python"></i>
+                                </div>
+                                <h4 class="skill-name">Python <span class="skillPtg"></span></h4>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="circle-item cProg" data-count="50">
+                                    <i class="fa-solid fa-c"></i>
+                                </div>
+                                <h4 class="skill-name">C Prog <span class="skillPtg"></span></h4>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="circle-item git" data-count="80">
-                                <i class="fa-brands fa-git-alt"></i>
+                </div>
+            </section>
+        </div>
+        <section class="allSection" id="projects">
+            <div class="about-section project-box">
+
+                <div class="icon">
+                    <i class="fa-solid fa-person-digging fa-bounce"></i>
+                </div>
+                <p>Projects are in progress and will be uploaded soon!</p>
+            </div>
+        </section>
+        <section id="contact" class="allSection">
+            <div class="about-section">
+                <div class="aboutHeading">
+                    <p class="firstHeading">CONTACT</p>
+                    <h3 class="secondHeading">Get in Touch</h3>
+                </div>
+                <div class="contact-container">
+                    <div class="formBox1">
+                        <form action="">
+                            <div class="nameInput form-item">
+                                <input type="text" placeholder="Name">
                             </div>
-                            <h4 class="skill-name">Git <span class="skillPtg"></span></h4>
-                        </div>
+                            <div class="emailInput form-item">
+                                <input type="text" placeholder="Email">
+                            </div>
+                            <div class="subjectInput form-item">
+                                <input type="text" placeholder="Subject">
+                            </div>
+                            <div class="messageInput form-item">
+                                <textarea  placeholder="Message"></textarea>
+                            </div>
+                            <div class="sendButton form-item">
+                                <button type="button">Send Message</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="circle-item node" data-count="65">
-                                <i class="fa-brands fa-node-js"></i>
-                            </div>
-                            <h4 class="skill-name">Node JS <span class="skillPtg"></span></h4>
+                    <div class="formBox2">
+                        <div class="formBox2Content1">
+                            <p>Please fill out the form on this section to contact with me. If there is an urgent then your can call me directly and number is given in the about section Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquam in vitae. Esse, fuga. Debitis, non hic? Sit, modi aut!</p>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="circle-item react" data-count="60">
-                                <i class="fa-brands fa-react"></i>
-                            </div>
-                            <h4 class="skill-name">React <span class="skillPtg"></span></h4>
+                        <div class="formBox2Content2">
+                            <p>Phone: <span>+91 9146609969</span></p>
+                            <p>Location: <span>Kondhali, Nagpur, 441103</span></p>
+                            <p>Email: <span>shubhamvairagade91@gmail.com</span></p>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="circle-item python" data-count="68">
-                                <i class="fa-brands fa-python"></i>
-                            </div>
-                            <h4 class="skill-name">Python <span class="skillPtg"></span></h4>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="circle-item cProg" data-count="50">
-                                <i class="fa-solid fa-c"></i>
-                            </div>
-                            <h4 class="skill-name">C Prog <span class="skillPtg"></span></h4>
+                        <div class="fromBox2Social">
+                            <div class="socialLinked social-icon"><a href="https://www.linkedin.com/in/shubhamvairagade" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+                            <div class="socialGithub social-icon"><a href="https://github.com/shubhamv2" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                            <div class="socialFacebook social-icon"><a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>
+                            <div class="socialInsta social-icon"><a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--
-        <section class="section"></section>
-        <section class="section"></section> -->
     </main>
+    <footer id="footer">
+        <p>Copyright&copy;2023 All rights are reserved</p>
+        <p>Designed by Shubham</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 
