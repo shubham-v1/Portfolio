@@ -233,9 +233,8 @@ body{
 }
 .right-box .about-content .aboutSecondText{
     margin-bottom: 2rem;
-    text-align: justify;
     line-height: 2rem;
-    letter-spacing: 1px;
+    letter-spacing: .7px;
     color: #4b4b4bd6;
 }
 .prof-name{
@@ -453,8 +452,7 @@ form{
     font-size: 1.2rem;
 }
 .formBox2Content1{
-    text-align: justify;
-    letter-spacing:.8px;
+    letter-spacing:.3px;
     line-height: 2rem;
     color: #2a4042d0;
 }
@@ -468,22 +466,8 @@ form{
 
 
 
-/* .formBox2Content2 span{
-    color: #2a4042d0;
-    margin-left: 1rem;
-    position: relative;
-}
-.formBox2Content2 span::before{
-    content: "";
-    position: absolute;
-    width: 0;
-    bottom: -5px;
-    transition: width 1s ease-in-out;
-    border: 1px solid black;
-} */
-/* .formBox2Content2 span:hover{
-    width: 100%;
-} */
+
+
 .fromBox2Social{
     font-size: 3rem;
     display: flex;

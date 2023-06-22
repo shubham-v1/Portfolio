@@ -25,6 +25,7 @@ const navbar = () => {
 
 
 
+
 // Dynamic Text code
 const dynamicTextFunction = () => {
     let dynamicElement = document.querySelectorAll('.dynamic-text');
@@ -87,18 +88,22 @@ const hamNavigate = () =>{
     hamIcon.addEventListener('click',()=>{
         if(isNavActive === true){
             hamIcon.innerHTML = '<i class="fa-solid fa-xmark"></i> ';
-            isNavActive = false
+            document.documentElement.style.overflowY = "hidden";
+            isNavActive = false;
         }
         else{
             hamIcon.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            document.documentElement.style.overflowY = "";
             isNavActive = true;
         }
         sidebar.classList.toggle('activeNav');
     })
+    
     document.addEventListener('click',(e)=>{
         if(e.target.id !== "sidebar" && !e.target.classList.contains('fa-solid')){
             sidebar.classList.remove('activeNav');
             hamIcon.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            document.documentElement.style.overflowY = "";
             isNavActive = true;
             
         }
@@ -139,9 +144,6 @@ const skillProgressBar = () => {
     })
 
 }
-
-
-
 
 
 

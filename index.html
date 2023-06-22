@@ -30,7 +30,7 @@
         </header>
     </div>
     <!-- sections -->
-    <main>
+    <main class="blur">
         <!-- Home Section -->
         <section class="section allSection" id="home">
             <div class="content">
@@ -212,27 +212,27 @@
                 </div>
                 <div class="contact-container">
                     <div class="formBox1">
-                        <form action="">
+                        <form>
                             <div class="nameInput form-item">
-                                <input type="text" placeholder="Name">
+                                <input type="text" name="name" placeholder="Name" required>
                             </div>
                             <div class="emailInput form-item">
-                                <input type="text" placeholder="Email">
+                                <input type="text" placeholder="Email" name="email" id="email" required>
                             </div>
                             <div class="subjectInput form-item">
-                                <input type="text" placeholder="Subject">
+                                <input type="text" placeholder="Subject" name="subject" id="subject" required>
                             </div>
                             <div class="messageInput form-item">
-                                <textarea  placeholder="Message"></textarea>
+                                <textarea  placeholder="Message" name="message" id="message" required></textarea>
                             </div>
                             <div class="sendButton form-item">
-                                <button type="button">Send Message</button>
+                                <button type="submit">Send Message</button>
                             </div>
                         </form>
                     </div>
                     <div class="formBox2">
                         <div class="formBox2Content1">
-                            <p>Please fill out the form on this section to contact with me. If there is an urgent then your can call me directly and number is given in the about section Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aliquam in vitae. Esse, fuga. Debitis, non hic? Sit, modi aut!</p>
+                            <p>Please fill out the form on this section to contact with me. If there is an urgent or Your are employer or client then your can call me directly, and number is given below. You can also follow me or join with me on Linked In and Instagram and other social media sites which are also given below. </p>
                         </div>
                         <div class="formBox2Content2">
                             <p>Phone: <span>+91 9146609969</span></p>
@@ -250,11 +250,12 @@
             </div>
         </section>
     </main>
-    <footer id="footer">
+    <footer id="footer" class="blur">
         <p>Copyright&copy;2023 All rights are reserved</p>
         <p>Designed by Shubham</p>
     </footer>
     <script src="script.js"></script>
+
 </body>
 
 </html>
