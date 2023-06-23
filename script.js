@@ -7,13 +7,16 @@ const navbar = () => {
         window.scrollY > 60 ? header.classList.add('headerColor') : header.classList.remove('headerColor');
 
         for(let i = 0; i < allSection.length; i++){
-            if(window.scrollY >= allSection[i].offsetTop){
-                document.querySelector('.active').classList.remove('active');
-                if(allSection[i].id === navLinks[i].href.split('#')[1]){
-                    const titleTab = allSection[i].id.slice(0,1).toUpperCase()+allSection[i].id.slice(1,allSection[i].id.length)
-                    document.title = `Shubham | ${titleTab}`
-                    navLinks[i].classList.add('active')
-                }
+            let top = window.scrollY;
+            let offset = allSection[i].offsetTop - 150;
+            let height = allSection[i].offsetHeight;
+            let id = allSection[i].id;
+            if(top > offset && top < offset + height){
+                navLinks.forEach(link =>{
+                    document.title = `Shubham | ${id.slice(0,1).toUpperCase()+id.slice(1,id.length)}`
+                    link.classList.remove('active');
+                    document.querySelector('div header nav ul li a[href*='+id+']').classList.add('active');
+                })
             }
 
         }
@@ -145,6 +148,27 @@ const skillProgressBar = () => {
 
 }
 
+// Email send
+function sendEmail(e) {
+    console.log(e,"hello");
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('message').value;
+    let body = `Name: ${name}<br>Email: ${email}<br>Message: ${message}`;
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "shubhwebdev@gmail.com",
+        Password: "B4C9EF5FA7B5B3A2FE76F99124461F15313A",
+        To: "shubhamvairagade91@gmail.com",
+        From: "shubhwebdev@gmail.com",
+        Subject: document.getElementById("subject").value,
+        Body: body
+    }).then(
+        message => alert(message),
+        // document.getElementById('buttton').innerHTML('Sent')
+    );
+    return false;
+}
 
 
 

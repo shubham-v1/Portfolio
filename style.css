@@ -53,6 +53,7 @@ body{
     outline: none;
     font-weight: 400;
     color: #2a4042;
+    transition: color .5s ease-in-out;
 }
 .header .navbar ul li a:hover, .header .navbar ul li a.active{
     color:#2196f3;
@@ -361,7 +362,7 @@ body{
     color: rgb(63, 63, 247);
 }
 .javascript{
-    color: rgb(217, 217, 4);
+    color: rgb(255, 242, 0);
 }
 .git{
     color: red;
@@ -373,7 +374,7 @@ body{
     color: #00d5ff;
 }
 .python{
-    color: rgb(255, 170, 0);
+    color: rgb(0, 255, 76);
 }
 .cProg{
     color: rgb(142, 142, 241);
@@ -498,15 +499,15 @@ form{
 #footer{
     width: 100%;
     height: 200px;
-    background-color:#263238;
-    color: #eeeeee;
+    background-color:#201b3c;
+    color: #d1d1d1;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 #footer p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 1rem 0;
 }
 

@@ -213,9 +213,9 @@
                 <div class="contact-container">
                     <div class="formBox1">
                         <form id="subForm" onsubmit="sendEmail(); reset(); return false">
-                            <!-- <div class="nameInput form-item">
+                            <div class="nameInput form-item">
                                 <input type="text" name="name" placeholder="Name" id="name" required>
-                            </div> -->
+                            </div>
                             <div class="emailInput form-item">
                                 <input type="text" placeholder="Email" name="email" id="email" required>
                             </div>
@@ -226,15 +226,15 @@
                                 <textarea placeholder="Message" name="message" id="message" required></textarea>
                             </div>
                             <div class="sendButton form-item">
-                                <button type="submit">Send Message</button>
+                                <button type="submit" id="button">Send Message</button>
                             </div>
                         </form>
                     </div>
                     <div class="formBox2">
                         <div class="formBox2Content1">
                             <p>Please fill out the form on this section to contact with me. If there is an urgent or
-                                Your are employer or client then your can call me directly, and number is given below.
-                                You can also follow me or join with me on Linked In and Instagram and other social media
+                                Your are employer or client then your can contact me directly number is given below.
+                                You can also follow me or join  me on LinkedIn and Instagram and other social media
                                 sites which are also given below. </p>
                         </div>
                         <div class="formBox2Content2">
@@ -258,29 +258,12 @@
         </section>
     </main>
     <footer id="footer" class="blur">
-        <p>Copyright&copy;2023 All rights are reserved</p>
+        <p>Copyright &copy; 2023 All rights are reserved</p>
         <p>Designed by Shubham</p>
     </footer>
 
     <script src="script.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script>
-        function sendEmail() {
-
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "shubhwebdev@gmail.com",
-                Password: "B4C9EF5FA7B5B3A2FE76F99124461F15313A",
-                To: "shubhamvairagade91@gmail.com",
-                From: document.getElementById('email').value,
-                Subject: document.getElementById("subject").value,
-                Body: document.getElementById("message").value
-            }).then(
-                message => alert(message)
-            );
-            console.log(document.getElementById('email').value)
-        }
     </script>
 </body>
 
