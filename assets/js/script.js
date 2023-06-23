@@ -149,8 +149,7 @@ const skillProgressBar = () => {
 }
 
 // Email send
-function sendEmail(e) {
-    console.log(e,"hello");
+function sendEmail() {
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
     let message = document.getElementById('message').value;
@@ -164,10 +163,8 @@ function sendEmail(e) {
         Subject: document.getElementById("subject").value,
         Body: body
     }).then(
-        message => alert(message),
-        // document.getElementById('buttton').innerHTML('Sent')
+        message => alert(message)
     );
-    return false;
 }
 
 
